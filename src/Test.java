@@ -1,5 +1,4 @@
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args){
@@ -33,5 +32,26 @@ public class Test {
         nodepq2.offer(n2);
         nodepq2.offer(n3);
         System.out.println(nodepq2.poll().value);
+
+        int[] array = {7, 4, 1, 9, 8, 5, 2, 3};
+        SmallestK maxHeap = new SmallestK();
+        List<Integer> res = maxHeap.maxheap(array, 3);
+        for(int r: res){
+            System.out.print(r + " ");
+        }
+
+        System.out.println();
+
+        SmallestK minHeap = new SmallestK();
+        List<Integer> result = minHeap.minheap(array, 3);
+        for(int n: result){
+            System.out.print(n + " ");
+        }
+        System.out.println();
+        SmallestK quickSelect = new SmallestK();
+        List<Integer> ans = quickSelect.quickSelect(array, 3);
+        for(int n: ans){
+            System.out.print(n + " ");
+        }
     }
 }
